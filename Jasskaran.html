@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickle Paradise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Pickle Paradise</h1>
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>Our Pickles</h2>
+        <div class="product" data-id="1">
+            <img src="images/pickle1.jpg" alt="Classic Cucumber Pickle">
+            <h3>Classic Cucumber Pickle</h3>
+            <p>$5.99</p>
+            <button onclick="addToCart(1, 'Classic Cucumber Pickle', 5.99)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="2">
+            <img src="images/pickle2.jpg" alt="Spicy Mango Pickle">
+            <h3>Spicy Mango Pickle</h3>
+            <p>$6.99</p>
+            <button onclick="addToCart(2, 'Spicy Mango Pickle', 6.99)">Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+        <button onclick="checkout()">Proceed to Checkout</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pickle Paradise</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
