@@ -1,113 +1,57 @@
-/* Base Styles */
+/* Reset and base styles */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fffbea;
+  color: #333;
 }
 
 header {
-  background-color: #2e8b57;
-  color: white;
-  padding: 20px;
+  background-color: #ffcc00;
+  padding: 2rem;
   text-align: center;
 }
 
-nav {
-  margin-top: 10px;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
 
-#products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  gap: 20px;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
 }
 
-.product {
-  background: #f4f4f4;
-  border-radius: 8px;
-  padding: 15px;
+.product-card {
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   text-align: center;
-  width: 280px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
 }
 
-.product img {
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-#cart {
-  padding: 20px;
-  background-color: #f9f9f9;
-}
-
-#cart-items {
-  list-style: none;
-  padding: 0;
-}
-
-#cart-items li {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #2e8b57;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #246b45;
-}
-
 footer {
-  background-color: #2e8b57;
-  color: white;
   text-align: center;
-  padding: 10px;
-  font-size: 0.9rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 8px 0;
-  }
-
-  #products {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product {
-    width: 90%;
-  }
-
-  #cart-items li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  button {
-    width: 100%;
-    margin-top: 10px;
-  }
+  padding: 1rem;
+  background-color: #eee;
+  margin-top: 2rem;
 }
