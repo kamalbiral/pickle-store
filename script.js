@@ -50,3 +50,6 @@ function checkout() {
 }
 
 updateCart();
+// You can add interactivity here later, like a shopping cart
+console.log("Pickle Store loaded!");
+
