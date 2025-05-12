@@ -1,66 +1,113 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background-color: #2e8b57;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #2e8b57;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 #products {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
 }
 
 .product {
-    text-align: center;
-    width: 200px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 #cart {
-    padding: 20px;
-    background-color: #f9f9f9;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
 #cart-items {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 #cart-items li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #2e8b57;
-    color: white;
-    border: none;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #246b45;
 }
 
 footer {
-    background-color: #2e8b57;
-    color: white;
-    text-align: center;
-    padding: 10px;
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  #products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%;
+  }
+
+  #cart-items li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
